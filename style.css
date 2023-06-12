@@ -59,7 +59,7 @@ select:hover {
   label,
   button,
   select {
-    font-size: 1.2em;
+    font-size: 1.6em;
   }
 }
 @media screen and (max-width: 600px) {
@@ -68,6 +68,6 @@ select:hover {
   label,
   button,
   select {
-    font-size: 1.4em;
+    font-size: 2em;
   }
 }
