@@ -12,29 +12,35 @@
 body {
   background-color: #282828;
   color: antiquewhite;
-  padding: 10px;
+  position: relative;
   display: grid;
   place-items: center;
   height: 100vh;
   margin: 0;
 }
 
-#movie {
+p {
+  max-width: 500px;
+}
+#movie,
+h1 {
   text-align: center;
+  background-color: #282828;
 }
 
 button,
 select {
-  background-color: #424242;
+  justify-content: center;
+  background-color: #383838;
   color: antiquewhite;
-  padding: 10px;
+  padding: 5px;
   border-radius: 5px;
   border: solid black 0px;
-  margin-left: 2px;
-  margin-right: 2px;
+  margin-left: 5px;
+  margin-right: 5px;
   margin-bottom: 5px;
   margin-top: 5px;
-  font-size: calc(12px + (15 -12) * ((100vw -300px) / (1600 -300)));
+  font-size: 12px;
   font-weight: bold;
   transition: background 0.5s ease;
 }
@@ -42,21 +48,4 @@ select {
 button:hover,
 select:hover {
   color: white;
-}
-
-form {
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-@media screen and (max-width: 600px) {
-  body {
-    font-size: calc(14px + (16 -14) * ((100vw -300px) / (1600 -300)));
-  }
-  button,
-  select {
-    font-size: calc(12px + (15 -12) * ((100vw -300px) / (1600 -300)));
-  }
 }

@@ -27,15 +27,44 @@ async function getRandomMovie(genre) {
 // Add an event listener to the #get-movie element to fetch and display a random movie
 // Get movie based on selection from the #genre-select
 // Call the getRandomMovie function to get a random movie from the selected genre
-// Update the inner HTML
 
 document.querySelector("#random-Movie").addEventListener("click", async () => {
   const selectGenre = document.querySelector("#select-Genre");
   const genreId = selectGenre.value;
   const movie = await getRandomMovie(genreId);
-  document.querySelector("#movie").innerHTML = `
-    <h2>${movie.title}</h2>
-    <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
-    <p>${movie.overview}</p>
-  `;
+  
+  // Update the text content of the elements on the page
+  document.querySelector("#movie h2").textContent = movie.title;
+  document.querySelector("#movie img").src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+  document.querySelector("#movie img").alt = movie.title;
+  document.querySelector("#movie p").textContent = movie.overview;
+  
+  // Get the streaming service availability data from the API
+  const availabilityResponse = await fetch(
+    `${BASE_URL}/movie/${movie.id}/watch/providers`,
+    {
+      headers: {
+        Authorization: API_KEY,
+      },
+    }
+  );
+  const availabilityData = await availabilityResponse.json();
+  
+  // Check if the movie is available on any streaming services
+  if (availabilityData.results.NO && availabilityData.results.NO.flatrate) {
+    // Get the first available streaming service
+    const streamingService = availabilityData.results.NO.flatrate[0];
+    
+    // Update the href and text content of the link element on the page
+    document.querySelector("#movie a").href = streamingService.link;
+    document.querySelector("#movie a").textContent = `Watch on ${streamingService.provider_name}`;
+    
+    // Show the link element and hide the "not available" message
+    document.querySelector("#movie a").style.display = "inline";
+    document.querySelector("#movie p:nth-of-type(2)").style.display = "none";
+  } else {
+    // Hide the link element and show the "not available" message
+    document.querySelector("#movie a").style.display = "none";
+    document.querySelector("#movie p:nth-of-type(2)").style.display = "block";
+  }
 });
