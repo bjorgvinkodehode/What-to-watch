@@ -26,7 +26,6 @@ body {
 button,
 select {
   background-color: #424242;
-
   color: antiquewhite;
   padding: 10px;
   border-radius: 5px;
@@ -35,7 +34,7 @@ select {
   margin-right: 2px;
   margin-bottom: 5px;
   margin-top: 5px;
-  font-size: 15px;
+  font-size: calc(12px + (15 -12) * ((100vw -300px) / (1600 -300)));
   font-weight: bold;
   transition: background 0.5s ease;
 }
@@ -43,5 +42,21 @@ select {
 button:hover,
 select:hover {
   color: white;
-  font-size: 15.1px;
+}
+
+form {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: calc(14px + (16 -14) * ((100vw -300px) / (1600 -300)));
+  }
+  button,
+  select {
+    font-size: calc(12px + (15 -12) * ((100vw -300px) / (1600 -300)));
+  }
 }

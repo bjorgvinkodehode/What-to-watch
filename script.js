@@ -29,9 +29,9 @@ async function getRandomMovie(genre) {
 // Call the getRandomMovie function to get a random movie from the selected genre
 // Update the inner HTML
 
-document.querySelector("#rmovie").addEventListener("click", async () => {
-  const genreSelect = document.querySelector("#genres");
-  const genreId = genreSelect.value;
+document.querySelector("#random-Movie").addEventListener("click", async () => {
+  const selectGenre = document.querySelector("#select-Genre");
+  const genreId = selectGenre.value;
   const movie = await getRandomMovie(genreId);
   document.querySelector("#movie").innerHTML = `
     <h2>${movie.title}</h2>
