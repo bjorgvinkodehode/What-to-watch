@@ -1,0 +1,47 @@
+:root {
+  font-family: "Bruno Ace SC", cursive;
+  font-family: "Roboto", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #282828;
+  color: antiquewhite;
+  padding: 10px;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#movie {
+  text-align: center;
+}
+
+button,
+select {
+  background-color: #424242;
+
+  color: antiquewhite;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid black 0px;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  transition: background 0.5s ease;
+}
+
+button:hover,
+select:hover {
+  color: white;
+  font-size: 15.1px;
+}
