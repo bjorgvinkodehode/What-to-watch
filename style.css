@@ -1,6 +1,6 @@
 :root {
   font-size: 16px;
-  font-family: "Bruno Ace SC", cursive;
+
   font-family: "Roboto", sans-serif;
 }
 
@@ -11,15 +11,19 @@
 }
 
 body {
+  justify-content: center;
   background-color: #282828;
   color: antiquewhite;
-
   display: grid;
   place-items: center;
   height: 100vh;
   margin: 0;
 }
-
+iframe {
+  padding: 1em;
+  margin-left: 10em;
+  padding-right: 10em;
+}
 p,
 iframe {
   max-width: 31.25em; /* 500px */
@@ -29,15 +33,15 @@ iframe {
 h1,
 p,
 img,
-label {
+label,
+iframe {
   text-align: center;
   background-color: #282828;
   font-size: 1em;
 }
 
 button,
-select,
-iframe {
+select {
   justify-content: center;
   background-color: #383838;
   color: antiquewhite;
