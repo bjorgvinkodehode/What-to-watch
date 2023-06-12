@@ -53,6 +53,15 @@ button:hover,
 select:hover {
   color: white;
 }
+@media screen and (max-width: 1200px) {
+  h1,
+  p,
+  label,
+  button,
+  select {
+    font-size: 1.4em;
+  }
+}
 @media screen and (max-width: 1000px) {
   h1,
   p,
