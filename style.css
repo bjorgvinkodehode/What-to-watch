@@ -53,7 +53,16 @@ button:hover,
 select:hover {
   color: white;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1800px) {
+  h1,
+  p,
+  label,
+  button,
+  select {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 1500px) {
   h1,
   p,
   label,
@@ -62,7 +71,7 @@ select:hover {
     font-size: 1.4em;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1300px) {
   h1,
   p,
   label,
@@ -71,12 +80,66 @@ select:hover {
     font-size: 1.6em;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
+  h1,
+  p,
+  label,
+  button,
+  select {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 1100px) {
+  h1,
+  p,
+  label,
+  button,
+  select {
+    font-size: 1.6em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  h1,
+  p,
+  label,
+  button,
+  select {
+    font-size: 1.8em;
+  }
+}
+@media screen and (max-width: 900px) {
   h1,
   p,
   label,
   button,
   select {
     font-size: 2em;
+  }
+}
+@media screen and (max-width: 800px) {
+  h1,
+  p,
+  label,
+  button,
+  select {
+    font-size: 2.1em;
+  }
+}
+@media screen and (max-width: 700px) {
+  h1,
+  p,
+  label,
+  button,
+  select {
+    font-size: 2.3em;
+  }
+}
+@media screen and (max-width: 600px) {
+  h1,
+  p,
+  label,
+  button,
+  select {
+    font-size: 2.5em;
   }
 }
