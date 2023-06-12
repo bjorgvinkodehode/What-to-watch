@@ -1,4 +1,5 @@
 :root {
+  font-size: 16px;
   font-family: "Bruno Ace SC", cursive;
   font-family: "Roboto", sans-serif;
 }
@@ -20,8 +21,9 @@ body {
 }
 
 p {
-  max-width: 500px;
+  max-width: 31.25em; /* 500px */
 }
+
 #movie,
 h1,
 p,
@@ -29,29 +31,39 @@ img {
   text-align: center;
   background-color: #282828;
 }
+
 h1,
 p,
 label {
-  font-size: 40px;
+  font-size: 1em;
 }
+
 button,
 select {
   justify-content: center;
   background-color: #383838;
   color: antiquewhite;
-  padding: 5px;
-  border-radius: 5px;
+  padding: 0.3125em;
+  border-radius: 0.3125em;
   border: solid black 0px;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  margin-top: 5px;
-  font-size: 40px;
-  font-weight: bold;
-  transition: background 0.5s ease;
+  margin-left: 0.3125em;
+  margin-right: 0.3125em;
+  margin-bottom: 0.3125em;
+  margin-top: 0.3125em;
+  font-size: 1em;
 }
 
 button:hover,
 select:hover {
   color: white;
+}
+
+@media screen and (max-width: 600px) {
+  h1,
+  p,
+  .label,
+  .button,
+  .select {
+    font-size: 2em;
+  }
 }
