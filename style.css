@@ -12,7 +12,7 @@
 body {
   background-color: #282828;
   color: antiquewhite;
-  position: relative;
+
   display: grid;
   place-items: center;
   height: 100vh;
@@ -23,11 +23,17 @@ p {
   max-width: 500px;
 }
 #movie,
-h1 {
+h1,
+p,
+img {
   text-align: center;
   background-color: #282828;
 }
-
+h1,
+p,
+label {
+  font-size: 40px;
+}
 button,
 select {
   justify-content: center;
@@ -40,7 +46,7 @@ select {
   margin-right: 5px;
   margin-bottom: 5px;
   margin-top: 5px;
-  font-size: 12px;
+  font-size: 40px;
   font-weight: bold;
   transition: background 0.5s ease;
 }
