@@ -39,32 +39,35 @@ document.querySelector("#random-Movie").addEventListener("click", async () => {
   document.querySelector("#movie img").alt = movie.title;
   document.querySelector("#movie p").textContent = movie.overview;
   
-  // Get the streaming service availability data from the API
-  const availabilityResponse = await fetch(
-    `${BASE_URL}/movie/${movie.id}/watch/providers`,
+  // Get the videos data from the API
+  const videosResponse = await fetch(
+    `${BASE_URL}/movie/${movie.id}/videos`,
     {
       headers: {
         Authorization: API_KEY,
       },
     }
   );
-  const availabilityData = await availabilityResponse.json();
-  
-  // Check if the movie is available on any streaming services
-  if (availabilityData.results.NO && availabilityData.results.NO.flatrate) {
-    // Get the first available streaming service
-    const streamingService = availabilityData.results.NO.flatrate[0];
+  const videosData = await videosResponse.json();
+
+  // Check if there are any videos available
+  if (videosData.results.length > 0) {
+    // Get the first video
+    const video = videosData.results[0];
     
-    // Update the href and text content of the link element on the page
-    document.querySelector("#movie a").href = streamingService.link;
-    document.querySelector("#movie a").textContent = `Watch on ${streamingService.provider_name}`;
-    
-    // Show the link element and hide the "not available" message
-    document.querySelector("#movie a").style.display = "inline";
-    document.querySelector("#movie p:nth-of-type(2)").style.display = "none";
+    // Check if the video is a YouTube video
+    if (video.site === "YouTube") {
+      // Update the src attribute of the iframe element on the page
+      document.querySelector("#movie iframe").src = `https://www.youtube.com/embed/${video.key}`;
+      
+      // Show the iframe element
+      document.querySelector("#movie iframe").style.display = "block";
+    } else {
+      // Hide the iframe element
+      document.querySelector("#movie iframe").style.display = "none";
+    }
   } else {
-    // Hide the link element and show the "not available" message
-    document.querySelector("#movie a").style.display = "none";
-    document.querySelector("#movie p:nth-of-type(2)").style.display = "block";
+    // Hide the iframe element
+    document.querySelector("#movie iframe").style.display = "none";
   }
 });
