@@ -24,8 +24,8 @@ async function getRandomMovie(genre) {
   return randomMovie;
 }
 
-// Add an event listener to the #get-movie element to fetch and display a random movie
-// Get movie based on selection from the #genre-select
+// Event listener to the #get-movie element to fetch and display a random movie
+// Get movie based on selection from the #select-Genre
 // Call the getRandomMovie function to get a random movie from the selected genre
 
 document.querySelector("#random-Movie").addEventListener("click", async () => {
