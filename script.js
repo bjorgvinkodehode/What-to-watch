@@ -1,5 +1,5 @@
 //API key and base URL for the Movie Database API
-const API_KEY =
+const API_KEY = "38b2ddceaa417055aa1bbb6a8586420d"
 const BASE_URL = "https://api.themoviedb.org/3";
 
 //asynchronous function to get a random movie from a genre
