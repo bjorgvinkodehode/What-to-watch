@@ -22,11 +22,15 @@ document.querySelector("#random-Movie").addEventListener("click", async () => {
   const selectGenre = document.querySelector("#select-Genre");
   const genreId = selectGenre.value;
   const movie = await getRandomMovie(genreId);
+  const movieInfoDiv = document.querySelector(".movie-info");
 
   document.querySelector("#movie h2").textContent = movie.title;
   document.querySelector("#movie img").src = `https://image.tmdb.org/t/p/w342${movie.poster_path}`;
   document.querySelector("#movie img").alt = movie.title;
   document.querySelector("#movie p").textContent = movie.overview;
+  
+
+movieInfoDiv.classList.remove('hidden');
 
   const videosResponse = await fetch(
     `${BASE_URL}/movie/${movie.id}/videos`,
