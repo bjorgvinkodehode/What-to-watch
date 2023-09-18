@@ -45,6 +45,15 @@ body {
   margin: 1em auto;
 }
 
+button, select {
+  background-color: #383838;
+  color: antiquewhite;
+  padding: 0.3125em;
+  border: none;
+  border-radius: 0.3125em;
+  cursor: pointer;
+}
+
 /* Responsiveness for mobile */
 @media screen and (max-width: 768px) {
   .main-container {
@@ -54,14 +63,13 @@ body {
   .second-row .movie-info {
     padding: 1em;
   }
+
+  h1, h2, label, p, button {
+    font-size: 2em;  
+  }
+  
+  select {
+    font-size: 2em; 
+  }
 }
 
-
-button, select {
-  background-color: #383838;
-  color: antiquewhite;
-  padding: 0.3125em;
-  border: none;
-  border-radius: 0.3125em;
-  cursor: pointer;
-}
