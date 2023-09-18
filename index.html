@@ -8,44 +8,48 @@
 <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>What to Watch</title>
   </head>
-<body>
-  <section>
-  <h1>What to Watch</h1>
-  <label for="select-Genre">Choose a genre:</label>
-  <select id="select-Genre">
-    <option value="27">Horror</option>
-    <option value="28">Action</option>
-    <option value="12">Adventure</option>
-    <option value="16">Animation</option>
-    <option value="35">Comedy</option>
-    <option value="80">Crime</option>
-    <option value="99">Documentary</option>
-    <option value="18">Drama</option>
-    <option value="10751">Family</option>
-    <option value="14">Fantasy</option>
-    <option value="36">History</option>
-    <option value="10402">Music</option>
-    <option value="9648">Mystery</option>
-    <option value="10749">Romance</option>
-    <option value="878">Science Fiction</option>
-    <option value="10770">TV Movie</option>
-    <option value="53">Thriller</option>
-    <option value="10752">War</option>
-    <option value="37">Western</option>
-  </select>
-  <button id="random-Movie">Find a Movie</button>
-</section>
-<section>
-<div id="movie">
-  <h2>Movie Title</h2>
-  <p>Movie Overview</p>
-      <img src="https://image.tmdb.org/t/p/w500/movie-poster-path" alt="Movie Title">
-      <iframe width="500" src="https://www.youtube.com/embed/trailer-id" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-</section>
   <body>
-</html>
+    <main class="main-container">
+        <div class="first-row">
+            <h1>What to Watch</h1>
+            <label for="select-Genre">Choose a genre:</label>
+            <select id="select-Genre">
+            <option value="27">Horror</option>
+            <option value="28">Action</option>
+            <option value="12">Adventure</option>
+            <option value="16">Animation</option>
+            <option value="35">Comedy</option>
+            <option value="80">Crime</option>
+            <option value="99">Documentary</option>
+            <option value="18">Drama</option>
+            <option value="10751">Family</option>
+            <option value="14">Fantasy</option>
+            <option value="36">History</option>
+            <option value="10402">Music</option>
+            <option value="9648">Mystery</option>
+            <option value="10749">Romance</option>
+            <option value="878">Science Fiction</option>
+            <option value="10770">TV Movie</option>
+            <option value="53">Thriller</option>
+            <option value="10752">War</option>
+            <option value="37">Western</option>
+          </select>
+        <button id="random-Movie">Find a Movie</button>
+       </div>
+     <div class="second-row">
+  <div class="movie-info">
+              <div id="movie">
+          <h2>Movie Title</h2>
+          <p>Movie Overview</p>
+          <button id="open-trailer" style="display: none;">Watch Trailer</button>
+          <img src="https://image.tmdb.org/t/p/w500/movie-poster-path" alt="Movie Title">
+      </div>
+  </div>
+</div>
+</main>
+</body>
 
+</html>
 
 
 
