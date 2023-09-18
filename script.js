@@ -24,7 +24,7 @@ document.querySelector("#random-Movie").addEventListener("click", async () => {
   const movie = await getRandomMovie(genreId);
 
   document.querySelector("#movie h2").textContent = movie.title;
-  document.querySelector("#movie img").src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+  document.querySelector("#movie img").src = `https://image.tmdb.org/t/p/w342${movie.poster_path}`;
   document.querySelector("#movie img").alt = movie.title;
   document.querySelector("#movie p").textContent = movie.overview;
 

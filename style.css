@@ -6,39 +6,43 @@ body, h1, h2, h3, p, button, label, select {
   vertical-align: baseline;
 }
 
-/* Apply a background color */
+
 body {
-  height: 100;
   background-color: #4d4d4d;
   font-family: 'Roboto', sans-serif;
   color: antiquewhite;
 }
 
-/* Center content */
+
 .main-container {
   display: flex;
+  max-height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
   margin: 0 auto;
   padding: 1em;
 }
 
-/* Styling for the first row */
+
 .first-row {
   text-align: center;
   margin-bottom: 2em;
 }
 
 
-.second-row .movie-info {
+.second-row .movie-info{
   text-align: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   background-color: #252525;
   max-width: 500px;
   padding: 2em;
   border-radius: 8px;
+}
+
+#open-trailer {
+  display: block;
+  margin: 1em auto;
 }
 
 /* Responsiveness for mobile */
