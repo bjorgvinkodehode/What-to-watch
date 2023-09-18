@@ -2,7 +2,6 @@ body, h1, h2, h3, p, button, label, select {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   vertical-align: baseline;
 }
 
@@ -48,13 +47,14 @@ body {
 button, select {
   background-color: #383838;
   color: antiquewhite;
-  padding: 0.3125em;
+  padding: 0.5em;
+  margin: .1em;
   border: none;
   border-radius: 0.3125em;
   cursor: pointer;
 }
 
-/* Responsiveness for mobile */
+
 @media screen and (max-width: 768px) {
   .main-container {
     padding: 1em;
@@ -64,12 +64,14 @@ button, select {
     padding: 1em;
   }
 
-  h1, h2, label, p, button {
-    font-size: 2em;  
+   h2, label, p {
+    font-size: 1.3em; 
+    
   }
-  
-  select {
-    font-size: 2em; 
+
+  select, button {
+    font-size: 1.1em; 
+    
   }
 }
 
