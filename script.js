@@ -58,4 +58,23 @@ movieInfoDiv.classList.remove('hidden');
   } else {
     document.querySelector("#open-trailer").style.display = "none";
   }
+
+  const movieImg = document.querySelector("#movie img");
+
+// Function to set image size based on screen width
+const setImageSize = () => {
+  const width = window.innerWidth;
+  if (width <= 768) {
+    movieImg.src = `https://image.tmdb.org/t/p/w185${movie.poster_path}`;
+  } else {
+    movieImg.src = `https://image.tmdb.org/t/p/w342${movie.poster_path}`;
+  }
+};
+
+// Initially set image size
+setImageSize();
+
+// Update image size on window resize
+window.addEventListener('resize', setImageSize);
+
 });
